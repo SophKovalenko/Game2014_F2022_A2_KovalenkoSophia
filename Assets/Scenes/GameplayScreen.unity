@@ -1921,7 +1921,7 @@ GameObject:
   - component: {fileID: 1845618843}
   - component: {fileID: 1845618842}
   m_Layer: 0
-  m_Name: Idle (32x32)_0
+  m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
