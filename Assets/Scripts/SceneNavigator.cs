@@ -2,7 +2,7 @@
 //  Mobile Game Development
 //  Game 2014 Assignment 2
 //  Courageous City Crawler!! By Sophia Kovalenko - 101333565
-//  This program contains the scripts for a simple mobile game still in development.
+//  This program contains the scripts for a simple mobile platformer still in development.
 //
 //  Created: November 18th, 2022
 //  Last modified: November 18th, 2022
