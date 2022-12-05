@@ -37,7 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
     //[Header("Health System")]
     //public HealthBarController health;
     //public LifeCounter life;
-    //public DeathPlaneController deathPlane;
+    public DeathPlaneController deathPlane;
 
     [Header("Controls")]
     public Joystick leftStick;
@@ -54,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
         animator = GetComponent<Animator>();
         //health = FindObjectOfType<PlayerHealth>().GetComponent<HealthBarController>();
         //life = FindObjectOfType<LifeCounter>();
-        //deathPlane = FindObjectOfType<DeathPlaneController>();
+        deathPlane = FindObjectOfType<DeathPlaneController>();
         //soundManager = FindObjectOfType<SoundManager>();
         leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
 
