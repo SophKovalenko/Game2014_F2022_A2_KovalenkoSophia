@@ -39,7 +39,7 @@ public class SceneNavigator : MonoBehaviour
 
     public void PlayUIAudio()
     {
-       // UIAudio.PlayOneShot(buttonClick, 1.0f);
+       UIAudio.PlayOneShot(buttonClick, 1.0f);
     }
 
     public void OnInstructionsButtonClicked()

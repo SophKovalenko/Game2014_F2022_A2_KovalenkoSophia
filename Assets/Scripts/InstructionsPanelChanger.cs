@@ -20,6 +20,8 @@ public class InstructionsPanelChanger : MonoBehaviour
     public GameObject instructionsPanel3;
     public GameObject instructionsPanel4;
 
+    public SceneNavigator sceneNavigatorScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,17 +35,21 @@ public class InstructionsPanelChanger : MonoBehaviour
     {
         instructionsPanel1.SetActive(false);
         instructionsPanel2.SetActive(true);
+        sceneNavigatorScript.PlayUIAudio();
+        
     }
 
     public void OnSecondOkButtonClicked()
     {
         instructionsPanel2.SetActive(false);
         instructionsPanel3.SetActive(true);
+        sceneNavigatorScript.PlayUIAudio();
     }
 
     public void OnThirdOkButtonClicked()
     {
         instructionsPanel3.SetActive(false);
         instructionsPanel4.SetActive(true);
+        sceneNavigatorScript.PlayUIAudio();
     }
 }

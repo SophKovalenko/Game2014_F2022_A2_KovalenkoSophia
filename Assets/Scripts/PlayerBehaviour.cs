@@ -38,6 +38,7 @@ public class PlayerBehaviour : MonoBehaviour
     //public HealthBarController health;
     //public LifeCounter life;
     public DeathPlaneController deathPlane;
+    public int playerLives;
 
     [Header("Controls")]
     public Joystick leftStick;
@@ -57,6 +58,8 @@ public class PlayerBehaviour : MonoBehaviour
         deathPlane = FindObjectOfType<DeathPlaneController>();
         //soundManager = FindObjectOfType<SoundManager>();
         leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
+
+        playerLives = 3;
 
         //dustTrail = GetComponentInChildren<ParticleSystem>();
 
