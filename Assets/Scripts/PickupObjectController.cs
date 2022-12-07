@@ -6,11 +6,13 @@ public class PickupObjectController : MonoBehaviour
 {
     private ScoreManager scoreManager;
     private bool playerHasKey = false;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

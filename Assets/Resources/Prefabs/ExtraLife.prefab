@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3852699351902539651}
   - component: {fileID: 3852699351902539650}
-  - component: {fileID: 3852699351902539677}
+  - component: {fileID: -1216274863164162425}
+  - component: {fileID: 1170933926}
   m_Layer: 0
   m_Name: ExtraLife
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852699351902539648}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 45.1, y: 6.9, z: 0.20782888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -85,8 +86,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3852699351902539677
-BoxCollider2D:
+--- !u!114 &-1216274863164162425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852699351902539648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e441ee72c795cf943aa9be763fa39b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1170933926
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,16 +111,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.021510601}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.01, y: 1.71}
-    newSize: {x: 1.01, y: 1.71}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.021255493, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.8627167, y: 0.8202944}
-  m_EdgeRadius: 0
+  m_Radius: 0.4511261

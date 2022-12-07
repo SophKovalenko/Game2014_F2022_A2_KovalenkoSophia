@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 7570357065039244463}
   - component: {fileID: 7736000081061736530}
   - component: {fileID: 4463885661882549854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FlippingPlatformWithSpikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

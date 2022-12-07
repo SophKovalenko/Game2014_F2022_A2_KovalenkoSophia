@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3777113398678765338}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.3, y: 2.18, z: 0.20782888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -135,3 +135,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e441ee72c795cf943aa9be763fa39b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupPrefabs:
+  - {fileID: 7375368912649983406, guid: f36904e674063f345ad47f1ef9f12e6a, type: 3}
+  - {fileID: 3777113398678765338}
+  - {fileID: 3064443481277220083, guid: e421324421e7e6c4cafbdb166578ff8e, type: 3}
+  - {fileID: 8169490829864842160, guid: 1f0a718c21bf0234f9f551a76b3bed62, type: 3}
+  pickupSpawnLocations:
+  - {fileID: 7854315556583997947, guid: 9ff34b7572ad0734689d9ce022f8824c, type: 3}
+  - {fileID: 4833103621539088985, guid: d5a7f57a51f60f041b023168a2a27d70, type: 3}
+  - {fileID: 9152620711556283664, guid: 98ef2893c4477a04a92922081d717904, type: 3}
+  - {fileID: 131428319157104890, guid: 3ad47af710b64f046bc55c99f96049b2, type: 3}
+  - {fileID: 6113977264215875287, guid: 72afd9e3f0a9a9944a74ed5afd86b066, type: 3}
+  - {fileID: 8000482044970126703, guid: deb9d4b3b872939498227f3ea4a3bf3c, type: 3}
+  - {fileID: 1705796945403900527, guid: 3ebab4e4af81c8e42b077e0166b88e24, type: 3}
+  - {fileID: 3845517599216405996, guid: 90bd2f912bac1c246aa6314f1fec6bf9, type: 3}
