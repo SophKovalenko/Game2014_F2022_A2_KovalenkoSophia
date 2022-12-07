@@ -23,19 +23,19 @@ public class PickupObjectController : MonoBehaviour
         {
             switch (pickupName)
             {
-                case "Orange_Pickup": 
+                case "Orange_Pickup(Clone)": 
                     scoreManager.AddPoints(20);
                     Destroy(this.gameObject);
                     break;
-                case "Melon_Pickup":
+                case "Melon_Pickup(Clone)":
                     scoreManager.AddPoints(30);
                     Destroy(this.gameObject);
                     break;
-                case "Cherries_Pickup":
+                case "Cherries_Pickup(Clone)":
                     scoreManager.AddPoints(40);
                     Destroy(this.gameObject);
                     break;
-                case "Pineapple_Pickup":
+                case "Pineapple_Pickup(Clone)":
                     scoreManager.AddPoints(50);
                     Destroy(this.gameObject);
                     break;

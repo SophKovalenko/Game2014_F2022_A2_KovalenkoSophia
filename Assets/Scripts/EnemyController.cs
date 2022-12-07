@@ -2,12 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyType
-{ 
-    DOESNT_FIRE_DARTS,
-    FIRES_DARTS
-}
-
 public class EnemyController : MonoBehaviour
 {
     [Header("Movement Properties")]
@@ -22,9 +16,22 @@ public class EnemyController : MonoBehaviour
     public bool isGrounded;// Start is called before the first frame update
     public Vector2 direction;
 
+    [Header("Bullet Properties")]
+    public GameObject enemyBullet;
+    private SpriteRenderer flippedBullet;
+    private Rigidbody2D rb;
+    public bool firesDarts = false;
+    private bool isFacingRight = false;
+    private float bulletSpawnInterval = 4f;
+
     void Start()
     {
         direction = Vector2.left;
+
+        if (firesDarts == true)
+        {
+            StartCoroutine(SpawnEnemyBullets());
+        }
     }
 
     // Update is called once per frame
@@ -41,7 +48,7 @@ public class EnemyController : MonoBehaviour
 
         if (!isGroundAhead || isObstacleAhead)
         {
-           Flip();
+            Flip();
         }
     }
 
@@ -55,8 +62,37 @@ public class EnemyController : MonoBehaviour
         var x = transform.localScale.x * -1.0f;
         direction *= -1.0f;
         transform.localScale = new Vector3(x, 1.0f, 1.0f);
+
+        if (x == 1)
+        { isFacingRight = true; }
+        if (x == -1)
+        { isFacingRight = false; }
     }
 
+    public void FireBullet()
+    {
+        flippedBullet = enemyBullet.gameObject.GetComponent<SpriteRenderer>();
+
+        if (isFacingRight == false)
+        {
+            flippedBullet.flipX = true;
+            Instantiate(flippedBullet, this.transform.position, Quaternion.identity); 
+        }
+
+        if (isFacingRight == true)
+        {
+            flippedBullet.flipX = false;
+            Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
+        }
+    }
+
+    IEnumerator SpawnEnemyBullets()
+    {
+        FireBullet();
+        yield return new WaitForSeconds(bulletSpawnInterval);
+        StartCoroutine(SpawnEnemyBullets());
+    }
+    
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;

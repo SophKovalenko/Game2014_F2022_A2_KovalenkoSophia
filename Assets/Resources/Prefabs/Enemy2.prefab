@@ -260,8 +260,10 @@ MonoBehaviour:
   groundRadius: 0.5
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   isObstacleAhead: 0
   isGroundAhead: 0
   isGrounded: 0
   direction: {x: 0, y: 0}
+  enemyBullet: {fileID: 1936969735230489514, guid: 37b35c9c4ef66df48974d7f198bd6052, type: 3}
+  firesDarts: 0
