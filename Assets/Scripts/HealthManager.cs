@@ -51,5 +51,20 @@ public class HealthManager : MonoBehaviour
             lifeThreePrefab.SetActive(false);
         }
     }
+
+    public void ResetLives()
+    {
+        playerReference.playerLives = 0;
+    }
+
+    public void AddLife()
+    {
+        playerReference.playerLives += 1;
+    }
+
+    public void LoseLife()
+    {
+        playerReference.playerLives -= 1;
+    }
 }
 

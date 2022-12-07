@@ -25,18 +25,17 @@ public class PlayerBehaviour : MonoBehaviour
     //public ParticleSystem dustTrail;
     //public Color dustTrailColor;
 
-    //[Header("Screen Shake Properties")]
-    //public CinemachineVirtualCamera playerCamera;
-    //public CinemachineBasicMultiChannelPerlin perlin;
-    //public float shakeIntensity;
-    //public float shakeDuration;
-    //public float shakeTimer;
-    //public bool isCameraShaking;
-    //private int pushbackForce = 13; // How much should player be knocked back on collision?
+    [Header("Screen Shake Properties")]
+    public CinemachineVirtualCamera playerCamera;
+    public CinemachineBasicMultiChannelPerlin perlin;
+    public float shakeIntensity;
+    public float shakeDuration;
+    public float shakeTimer;
+    public bool isCameraShaking;
+    private int pushbackForce = 13; // How much should player be knocked back on collision?
 
-    //[Header("Health System")]
-    //public HealthBarController health;
-    //public LifeCounter life;
+    [Header("Health System")]
+    public HealthManager healthManagerRef;
     public DeathPlaneController deathPlane;
     public int playerLives;
 
@@ -63,10 +62,10 @@ public class PlayerBehaviour : MonoBehaviour
 
         //dustTrail = GetComponentInChildren<ParticleSystem>();
 
-       // playerCamera = GameObject.Find("PlayerCamera").GetComponent<CinemachineVirtualCamera>();
-        //perlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        //isCameraShaking = false;
-        //shakeTimer = shakeDuration;
+        playerCamera = GameObject.Find("PlayerCamera").GetComponent<CinemachineVirtualCamera>();
+        perlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        isCameraShaking = false;
+        shakeTimer = shakeDuration;
     }
 
     void Update()
@@ -100,17 +99,17 @@ public class PlayerBehaviour : MonoBehaviour
         Jump();
         AirCheck();
 
-        ////Camera Shake Control
-        //if (isCameraShaking)
-        //{
-        //    shakeTimer -= Time.deltaTime;
-        //    if (shakeTimer <= 0.0f) // timed out
-        //    {
-        //        perlin.m_AmplitudeGain = 0.0f;
-        //        shakeTimer = shakeDuration;
-        //        isCameraShaking = false;
-        //    }
-        //}
+        //Camera Shake Control
+        if (isCameraShaking)
+        {
+            shakeTimer -= Time.deltaTime;
+            if (shakeTimer <= 0.0f) // timed out
+            {
+                perlin.m_AmplitudeGain = 0.0f;
+                shakeTimer = shakeDuration;
+                isCameraShaking = false;
+            }
+        }
     }
 
     private void Move()
@@ -163,11 +162,11 @@ public class PlayerBehaviour : MonoBehaviour
     //    dustTrail.Play();
     //}
 
-    //private void ShakeCamera()
-    //{
-    //    perlin.m_AmplitudeGain = shakeIntensity;
-    //    isCameraShaking = true;
-    //}
+    private void ShakeCamera()
+    {
+        perlin.m_AmplitudeGain = shakeIntensity;
+        isCameraShaking = true;
+    }
 
     private void Jump()
     {
@@ -225,25 +224,25 @@ public class PlayerBehaviour : MonoBehaviour
     //    }
     //}
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Hazard"))
-    //    {
-    //        health.TakeDamage(30);
-    //        soundManager.PlaySoundFX(Sounds.HURT, Channel.PLAYER_HURT_FX);
-    //        ShakeCamera();
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Hazard"))
+        {
+            healthManagerRef.LoseLife();
+            //soundManager.PlaySoundFX(Sounds.HURT, Channel.PLAYER_HURT_FX);
+            ShakeCamera();
 
-    //        // If player is facing right, knock them to the left
-    //        // If player if facing left, knock them to the right
-    //        if (isFacingRight == true)
-    //        {
-    //            rigidBody.AddForce(Vector2.left * pushbackForce, ForceMode2D.Impulse);
-    //        }
-    //        else if (isFacingRight == false)
-    //        {
-    //            rigidBody.AddForce(Vector2.right * pushbackForce, ForceMode2D.Impulse);
-    //        }
-    //    }
-    //}
+            // If player is facing right, knock them to the left
+            // If player if facing left, knock them to the right
+            if (isFacingRight == true)
+            {
+                rigidBody.AddForce(Vector2.left * pushbackForce, ForceMode2D.Impulse);
+            }
+            else if (isFacingRight == false)
+            {
+                rigidBody.AddForce(Vector2.right * pushbackForce, ForceMode2D.Impulse);
+            }
+        }
+    }
 
 }

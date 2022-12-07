@@ -317,6 +317,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -575,6 +583,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3187,6 +3203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckPoint: {fileID: 267784616}
+  healthManagerRef: {fileID: 0}
 --- !u!1001 &352189943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3819,6 +3836,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4008,6 +4033,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 482254204}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes (4)
@@ -4087,6 +4120,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4530,6 +4571,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4712,6 +4761,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 482254204}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes (2)
@@ -4898,6 +4955,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5105,6 +5170,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5213,6 +5286,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 482254204}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes (3)
@@ -5282,6 +5363,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 482254204}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes (1)
@@ -7989,6 +8078,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8048,6 +8145,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8107,6 +8212,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8166,6 +8279,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8686,6 +8807,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8959,6 +9088,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9059,6 +9196,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9429,6 +9574,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9608,6 +9761,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes (5)
@@ -9628,6 +9789,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9692,8 +9861,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2144470424, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
+      propertyPath: shakeTimer
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144470424, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
+      propertyPath: shakeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144470424, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
       propertyPath: verticalForce
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144470424, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
+      propertyPath: shakeIntensity
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2144470424, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
       propertyPath: horizontalForce
@@ -9703,6 +9884,10 @@ PrefabInstance:
       propertyPath: horizontalSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2144470424, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
     - target: {fileID: 5222555245083962721, guid: 9d29911c27548eb469aada1336dfe6d5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -9776,6 +9961,10 @@ PrefabInstance:
     - target: {fileID: 5479281016473486589, guid: f462e911f789986449df6b25dc72869f, type: 3}
       propertyPath: m_Name
       value: SawHazard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479281016473486589, guid: f462e911f789986449df6b25dc72869f, type: 3}
+      propertyPath: m_TagString
+      value: Hazard
       objectReference: {fileID: 0}
     - target: {fileID: 5479281016473486590, guid: f462e911f789986449df6b25dc72869f, type: 3}
       propertyPath: m_RootOrder
@@ -9959,6 +10148,7 @@ GameObject:
   - component: {fileID: 1790151145}
   - component: {fileID: 1790151144}
   - component: {fileID: 1790151143}
+  - component: {fileID: 1790151146}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -10028,6 +10218,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1790151146
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790151141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!4 &1791064431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
@@ -10051,6 +10258,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10174,6 +10389,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10361,6 +10584,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 2082552427}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes (6)
@@ -10963,6 +11194,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11709,6 +11948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SawHazard
       objectReference: {fileID: 0}
+    - target: {fileID: 5479281016473486589, guid: f462e911f789986449df6b25dc72869f, type: 3}
+      propertyPath: m_TagString
+      value: Hazard
+      objectReference: {fileID: 0}
     - target: {fileID: 5479281016473486590, guid: f462e911f789986449df6b25dc72869f, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -12069,6 +12312,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 4896188345910445142, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 546158161}
     - target: {fileID: 7668050040385350298, guid: 1d8f874ac2fdeaa4e92a34df70b9ddd3, type: 3}
       propertyPath: m_Name
       value: FloorSpikes
@@ -12325,6 +12576,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2058355374}
     m_Modifications:
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: healthManagerRef
+      value: 
+      objectReference: {fileID: 2061343487}
+    - target: {fileID: 555642732, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
+      propertyPath: currentCheckPoint
+      value: 
+      objectReference: {fileID: 267784616}
     - target: {fileID: 8804755205134659728, guid: 1015cdf5a049bba4cb7a92811c3d09ae, type: 3}
       propertyPath: m_RootOrder
       value: -1

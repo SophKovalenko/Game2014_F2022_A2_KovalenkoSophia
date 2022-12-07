@@ -513,6 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4747955415039975363}
+  - component: {fileID: 4896188345910445142}
   m_Layer: 0
   m_Name: FloorSpikes
   m_TagString: Untagged
@@ -540,8 +541,22 @@ Transform:
   - {fileID: 4897995262216746331}
   - {fileID: 4399310982622270270}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4896188345910445142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668050040385350298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0fd90c8fb27534983531d6a1ec5251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCheckPoint: {fileID: 0}
+  healthManagerRef: {fileID: 0}
 --- !u!1 &7754523495355363227
 GameObject:
   m_ObjectHideFlags: 0

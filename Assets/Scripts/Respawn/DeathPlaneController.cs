@@ -6,21 +6,21 @@ using UnityEngine;
 public class DeathPlaneController : MonoBehaviour
 {
     public Transform currentCheckPoint;
+    public HealthManager healthManagerRef;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")
         {
             var player = other.gameObject.GetComponent<PlayerBehaviour>();
-           // player.life.LoseLife();
-           // player.health.ResetHealth();
+            healthManagerRef.LoseLife();
 
-           // if (player.life.value > 0)
-            //{
+            if (healthManagerRef.playerReference.playerLives > 0)
+            {
                 ReSpawn(other.gameObject);
 
-               // FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.DEATH, Channel.PLAYER_DEATH_FX);
-           // }
+               //FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.DEATH, Channel.PLAYER_DEATH_FX);
+            }
         }
     }
 
