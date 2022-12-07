@@ -259,11 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.0919
+      value: 26.29
       objectReference: {fileID: 0}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6552392
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4244,10 +4244,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2120197886}
     m_Modifications:
-    - target: {fileID: 831619017, guid: 5f6ff84f710c9994ca36540c268c796e, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7465449582160502912, guid: 5f6ff84f710c9994ca36540c268c796e, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4258,7 +4254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7465449582160502912, guid: 5f6ff84f710c9994ca36540c268c796e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89
+      value: -0.655
       objectReference: {fileID: 0}
     - target: {fileID: 7465449582160502912, guid: 5f6ff84f710c9994ca36540c268c796e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11352,7 +11348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7465449582160502912, guid: 5f6ff84f710c9994ca36540c268c796e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64.39501
+      value: 62.88
       objectReference: {fileID: 0}
     - target: {fileID: 7465449582160502912, guid: 5f6ff84f710c9994ca36540c268c796e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11970,14 +11966,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2120197886}
     m_Modifications:
-    - target: {fileID: 1863266338, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1863266338, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_RootOrder
       value: -1
