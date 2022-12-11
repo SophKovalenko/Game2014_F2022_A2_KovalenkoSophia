@@ -32,10 +32,6 @@ public class PlayerBehaviour : MonoBehaviour
     public Animator animator;
     public PlayerAnimationState playerAnimationState;
 
-    //[Header("Dust Trail Properties")]
-    //public ParticleSystem dustTrail;
-    //public Color dustTrailColor;
-
     [Header("Screen Shake Properties")]
     public CinemachineVirtualCamera playerCamera;
     public CinemachineBasicMultiChannelPerlin perlin;
@@ -62,6 +58,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Start()
     {
+        playerLives = 3;
+
         //Find the rigid body attached to the player
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -70,21 +68,10 @@ public class PlayerBehaviour : MonoBehaviour
         bulletPrefab = Resources.Load<GameObject>("Prefabs/playerBullet");
         leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
 
-        playerLives = 3;
-
         playerCamera = GameObject.Find("PlayerCamera").GetComponent<CinemachineVirtualCamera>();
         perlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         isCameraShaking = false;
         shakeTimer = shakeDuration;
-    }
-
-    void Update()
-    {
-        if (playerLives <= 0)
-        {
-            soundManager.PlaySoundFX(Sounds.PLAYER_DEATH, Channel.PLAYER_DEATH_FX);
-            SceneManager.LoadScene("GameOverScene");
-        }
     }
 
 

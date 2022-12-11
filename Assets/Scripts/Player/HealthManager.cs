@@ -12,6 +12,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -65,6 +66,17 @@ public class HealthManager : MonoBehaviour
     public void LoseLife()
     {
         playerReference.playerLives -= 1;
+
+        if (playerReference.playerLives <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    public void GameOver()
+    {
+        FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.PLAYER_DEATH, Channel.PLAYER_DEATH_FX);
+        SceneManager.LoadScene("GameOverScene");
     }
 }
 
