@@ -16,6 +16,7 @@ using UnityEngine.SceneManagement;
 public class PickupObjectController : MonoBehaviour
 {
     private ScoreManager scoreManager;
+    private SoundManager soundManager;
     private bool playerHasKey = false;
    
 
@@ -23,7 +24,7 @@ public class PickupObjectController : MonoBehaviour
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
-        
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,26 +37,32 @@ public class PickupObjectController : MonoBehaviour
             {
                 case "Orange_Pickup(Clone)": 
                     scoreManager.AddPoints(20);
+                    soundManager.PlaySoundFX(Sounds.PICKUP_FRUIT, Channel.PICKUP_FRUIT_FX);
                     Destroy(this.gameObject);
                     break;
                 case "Melon_Pickup(Clone)":
                     scoreManager.AddPoints(30);
+                    soundManager.PlaySoundFX(Sounds.PICKUP_FRUIT, Channel.PICKUP_FRUIT_FX);
                     Destroy(this.gameObject);
                     break;
                 case "Cherries_Pickup(Clone)":
                     scoreManager.AddPoints(40);
+                    soundManager.PlaySoundFX(Sounds.PICKUP_FRUIT, Channel.PICKUP_FRUIT_FX);
                     Destroy(this.gameObject);
                     break;
                 case "Pineapple_Pickup(Clone)":
                     scoreManager.AddPoints(50);
+                    soundManager.PlaySoundFX(Sounds.PICKUP_FRUIT, Channel.PICKUP_FRUIT_FX);
                     Destroy(this.gameObject);
                     break;
                 case "Key": Debug.Log("Player has key!");
                     playerHasKey = true;
+                    soundManager.PlaySoundFX(Sounds.PICKUP_KEY, Channel.PICKUP_KEY_FX);
                     Destroy(this.gameObject);
                     break;
                 case "ExtraLife":
                     Debug.Log("Player picked up an extra life!");
+                    soundManager.PlaySoundFX(Sounds.RESTORE_HEALTH, Channel.RESTORE_HEALTH_FX);
                     Destroy(this.gameObject);
                     break;
                 case "WinningTrophy":
@@ -71,6 +78,7 @@ public class PickupObjectController : MonoBehaviour
         if ((other.gameObject.name == "Player") && (playerHasKey == true))
         {
             Debug.Log("Nice! The door is open.");
+            soundManager.PlaySoundFX(Sounds.UNLOCK_DOOR, Channel.UNLOCK_DOOR_FX);
             Destroy(this.gameObject);
         }
         if ((other.gameObject.name == "Player") && (playerHasKey == false))

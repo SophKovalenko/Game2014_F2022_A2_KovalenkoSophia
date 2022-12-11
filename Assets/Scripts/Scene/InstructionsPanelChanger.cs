@@ -19,6 +19,7 @@ public class InstructionsPanelChanger : MonoBehaviour
     public GameObject instructionsPanel2;
     public GameObject instructionsPanel3;
     public GameObject instructionsPanel4;
+    public GameObject instructionsPanel5;
 
     public SceneNavigator sceneNavigatorScript;
 
@@ -50,6 +51,13 @@ public class InstructionsPanelChanger : MonoBehaviour
     {
         instructionsPanel3.SetActive(false);
         instructionsPanel4.SetActive(true);
+        sceneNavigatorScript.PlayUIAudio();
+    }
+
+    public void OnFourthOkButtonClicked()
+    {
+        instructionsPanel4.SetActive(false);
+        instructionsPanel5.SetActive(true);
         sceneNavigatorScript.PlayUIAudio();
     }
 }

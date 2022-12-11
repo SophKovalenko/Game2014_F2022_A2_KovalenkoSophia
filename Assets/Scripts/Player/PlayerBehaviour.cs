@@ -47,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
     private Rigidbody2D rigidBody;
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
-    //private SoundManager soundManager;
+    private SoundManager soundManager;
 
     void Start()
     {
@@ -55,12 +55,11 @@ public class PlayerBehaviour : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         deathPlane = FindObjectOfType<DeathPlaneController>();
+        soundManager = FindObjectOfType<SoundManager>();
         bulletPrefab = Resources.Load<GameObject>("Prefabs/playerBullet");
         leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
-        playerLives = 3;
 
-        //soundManager = FindObjectOfType<SoundManager>();
-        //dustTrail = GetComponentInChildren<ParticleSystem>();
+        playerLives = 3;
 
         playerCamera = GameObject.Find("PlayerCamera").GetComponent<CinemachineVirtualCamera>();
         perlin = playerCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -70,20 +69,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        //if (health.value <= 0)
-        //{
-        //    life.LoseLife();
-
-        //    if (life.value > 0)
-        //    {
-        //        health.ResetHealth();
-        //        deathPlane.ReSpawn(gameObject);
-        //        //soundManager.PlaySoundFX(Sounds.DEATH, Channel.PLAYER_DEATH_FX);
-        //    }
-        //}
-
         if (playerLives <= 0)
         {
+            soundManager.PlaySoundFX(Sounds.PLAYER_DEATH, Channel.PLAYER_DEATH_FX);
             SceneManager.LoadScene("GameOverScene");
         }
     }
@@ -129,11 +117,6 @@ public class PlayerBehaviour : MonoBehaviour
             rigidBody.velocity = new Vector2(clampedXVelocity, rigidBody.velocity.y);
 
             ChangeAnimation(PlayerAnimationState.RUN);
-
-            //if (isGrounded)
-            //{
-            //    CreateDustTrail();
-            //}
         }
 
         if ((isGrounded) && (x == 0.0f))
@@ -156,12 +139,6 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    //private void CreateDustTrail()
-    //{
-    //    dustTrail.GetComponent<Renderer>().material.SetColor("_Color", dustTrailColor);
-    //    dustTrail.Play();
-    //}
-
     private void ShakeCamera()
     {
         perlin.m_AmplitudeGain = shakeIntensity;
@@ -178,7 +155,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
             ChangeAnimation(PlayerAnimationState.JUMP);
-            //soundManager.PlaySoundFX(Sounds.JUMP, Channel.PLAYER_SOUND_FX);
+            soundManager.PlaySoundFX(Sounds.JUMP, Channel.PLAYER_JUMP_FX);
         }
     }
 
@@ -208,7 +185,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             playerLives -= 1;
-            //soundManager.PlaySoundFX(Sounds.HURT, Channel.PLAYER_HURT_FX);
+            soundManager.PlaySoundFX(Sounds.PLAYER_HURT, Channel.PLAYER_HURT_FX);
             ShakeCamera();
 
             // If player is facing right, knock them to the left
@@ -229,7 +206,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Hazard"))
         {
             healthManagerRef.LoseLife();
-            //soundManager.PlaySoundFX(Sounds.HURT, Channel.PLAYER_HURT_FX);
+            soundManager.PlaySoundFX(Sounds.PLAYER_HURT, Channel.PLAYER_HURT_FX);
             ShakeCamera();
 
             // If player is facing right, knock them to the left
@@ -249,6 +226,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         //Fire player bullet
         Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+        soundManager.PlaySoundFX(Sounds.PLAYER_BULLET, Channel.PLAYER_BULLET_FX);
     }
 
 }

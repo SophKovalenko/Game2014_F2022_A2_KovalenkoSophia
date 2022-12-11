@@ -71,6 +71,7 @@ public class BulletController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             scoreManager.AddPoints(10);
+            FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_HURT, Channel.ENEMY_HURT_FX);
             Destroy(other.gameObject);
             DestroyYourself();
         }

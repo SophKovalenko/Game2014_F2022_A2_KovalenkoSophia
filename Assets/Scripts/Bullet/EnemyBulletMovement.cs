@@ -77,6 +77,7 @@ public class EnemyBulletMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerRef.playerLives -= 1;
+            FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.PLAYER_HURT, Channel.PLAYER_HURT_FX);
             Debug.Log("Bullet hit player");
             DestroyBullet();
         }

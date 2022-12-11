@@ -76,13 +76,15 @@ public class EnemyController : MonoBehaviour
         if (isFacingRight == false)
         {
             flippedBullet.flipX = true;
-            Instantiate(flippedBullet, this.transform.position, Quaternion.identity); 
+            Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
+            FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_BULLET, Channel.ENEMY_BULLET_FX);
         }
 
         if (isFacingRight == true)
         {
             flippedBullet.flipX = false;
             Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
+            FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_BULLET, Channel.ENEMY_BULLET_FX);
         }
     }
 
