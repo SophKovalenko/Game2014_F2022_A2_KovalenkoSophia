@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickupObjectController : MonoBehaviour
 {
@@ -47,24 +48,25 @@ public class PickupObjectController : MonoBehaviour
                     Debug.Log("Player picked up an extra life!");
                     Destroy(this.gameObject);
                     break;
-                case "EndOfLevelDoor":
-                    if (playerHasKey == true)
-                    {
-                        Debug.Log("Nice! The door is open.");
-                        Destroy(this.gameObject);
-                    }
-                    if (playerHasKey == false)
-                    {
-                        Debug.Log("You dont have a key!");
-                        //TODO: popup window
-                    }
-                    break;
                 case "WinningTrophy":
-                    Debug.Log("Level Complete!");
                     Destroy(this.gameObject);
-                    //TODO: trigger GameWon state
+                    SceneManager.LoadScene("GameWonScene");
                     break;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if ((other.gameObject.name == "Player") && (playerHasKey == true))
+        {
+            Debug.Log("Nice! The door is open.");
+            Destroy(this.gameObject);
+        }
+        if ((other.gameObject.name == "Player") && (playerHasKey == false))
+        {
+            Debug.Log("You dont have a key!");
+            //TODO: popup window
         }
     }
 }

@@ -32,7 +32,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float shakeDuration;
     public float shakeTimer;
     public bool isCameraShaking;
-    private int pushbackForce = 13; // How much should player be knocked back on collision?
+    private int pushbackForce = 8; // How much should player be knocked back on collision?
 
     [Header("Health System")]
     public HealthManager healthManagerRef;
@@ -54,14 +54,12 @@ public class PlayerBehaviour : MonoBehaviour
         //Find the rigid body attached to the player
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //health = FindObjectOfType<PlayerHealth>().GetComponent<HealthBarController>();
-        //life = FindObjectOfType<LifeCounter>();
         deathPlane = FindObjectOfType<DeathPlaneController>();
-        //soundManager = FindObjectOfType<SoundManager>();
         bulletPrefab = Resources.Load<GameObject>("Prefabs/playerBullet");
         leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
         playerLives = 3;
 
+        //soundManager = FindObjectOfType<SoundManager>();
         //dustTrail = GetComponentInChildren<ParticleSystem>();
 
         playerCamera = GameObject.Find("PlayerCamera").GetComponent<CinemachineVirtualCamera>();
@@ -84,10 +82,10 @@ public class PlayerBehaviour : MonoBehaviour
         //    }
         //}
 
-        //if (life.value <= 0)
-        //{
-        //    SceneManager.LoadScene("End");
-        //}
+        if (playerLives <= 0)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 
 
@@ -205,26 +203,26 @@ public class PlayerBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(groundPoint.position, groundRadius);
     }
 
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-    //        health.TakeDamage(20);
-    //        soundManager.PlaySoundFX(Sounds.HURT, Channel.PLAYER_HURT_FX);
-    //        ShakeCamera();
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            playerLives -= 1;
+            //soundManager.PlaySoundFX(Sounds.HURT, Channel.PLAYER_HURT_FX);
+            ShakeCamera();
 
-    //        // If player is facing right, knock them to the left
-    //        // If player if facing left, knock them to the right
-    //        if (isFacingRight == true)
-    //        {
-    //            rigidBody.AddForce(Vector2.left * pushbackForce, ForceMode2D.Impulse);
-    //        }
-    //        else if (isFacingRight == false)
-    //        {
-    //            rigidBody.AddForce(Vector2.right * pushbackForce, ForceMode2D.Impulse);
-    //        }
-    //    }
-    //}
+            // If player is facing right, knock them to the left
+            // If player if facing left, knock them to the right
+            if (isFacingRight == true)
+            {
+                rigidBody.AddForce(Vector2.left * pushbackForce, ForceMode2D.Impulse);
+            }
+            else if (isFacingRight == false)
+            {
+                rigidBody.AddForce(Vector2.right * pushbackForce, ForceMode2D.Impulse);
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
