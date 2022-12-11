@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Mobile Game Development
+//  Game 2014 Assignment 2
+//  Courageous City Crawler!! By Sophia Kovalenko - 101333565
+//  This program contains the scripts for a simple mobile platformer still in development.
+//
+//  Created: Dec 11th, 2022
+//  Last modified: Dec 11th, 2022
+//  - this script manages displaying and incrementing the players score
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,9 +18,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     private TMP_Text scoreLabel;
-    private int score = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         scoreLabel = GameObject.Find("ScoreText").GetComponent<TMP_Text>();
@@ -18,24 +27,24 @@ public class ScoreManager : MonoBehaviour
 
     public int GetScore()
     {
-        return score;
+        return ScoreKeeper.totalScore;
     }
 
     public void SetScore(int newScore)
     {
-        score = newScore;
+        ScoreKeeper.totalScore = newScore;
         UpdateScoreLabel();
     }
 
     public void AddPoints(int points)
     {
-        score += points;
+        ScoreKeeper.totalScore += points;
         UpdateScoreLabel();
     }
 
     public void UpdateScoreLabel()
     {
-        scoreLabel.text = $"Score: {score}";
+        scoreLabel.text = $"Score: {ScoreKeeper.totalScore}";
     }
 }
 
