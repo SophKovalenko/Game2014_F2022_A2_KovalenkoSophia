@@ -18,13 +18,23 @@ public class PickupObjectController : MonoBehaviour
     private ScoreManager scoreManager;
     private SoundManager soundManager;
     private bool playerHasKey = false;
-   
+    public GameObject NoKeyPopup;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
         soundManager = FindObjectOfType<SoundManager>();
+        timer = 0;
+    }
+
+    public void Update()
+    {
+        if (NoKeyPopup.activeInHierarchy == true)
+        {
+            timer+= Time.deltaTime;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -84,7 +94,12 @@ public class PickupObjectController : MonoBehaviour
         if ((other.gameObject.name == "Player") && (playerHasKey == false))
         {
             Debug.Log("You dont have a key!");
-            //TODO: popup window
+            NoKeyPopup.SetActive(true);
+            if (timer == 4.0f)
+            {
+                NoKeyPopup.SetActive(false);
+                timer = 0;
+            }
         }
     }
 }

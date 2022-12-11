@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Mobile Game Development
+//  Game 2014 Assignment 2
+//  Courageous City Crawler!! By Sophia Kovalenko - 101333565
+//  This program contains the scripts for a simple mobile platformer still in development.
+//
+//  Created: Dec 8th, 2022
+//  Last modified: Dec 11th, 2022
+//  - this script manages enemy bullets spawning in the scene
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +35,14 @@ public class EnemyController : MonoBehaviour
     private bool isFacingRight = false;
     private float bulletSpawnInterval = 4f;
 
+    private bool hasLOS;
+    private PlayerDetection playerDetection;
+
+    void Awake()
+    {
+        playerDetection = transform.parent.GetComponentInChildren<PlayerDetection>();
+    }
+
     void Start()
     {
         direction = Vector2.left;
@@ -40,6 +59,8 @@ public class EnemyController : MonoBehaviour
         isObstacleAhead = Physics2D.Linecast(groundPoint.position, inFrontPoint.position, groundLayerMask);
         isGroundAhead = Physics2D.Linecast(groundPoint.position, aheadPoint.position, groundLayerMask);
         isGrounded = Physics2D.OverlapCircle(groundPoint.position, groundRadius, groundLayerMask);
+        hasLOS = playerDetection.LOS;
+
 
         if (isGrounded && isGroundAhead)
         {
@@ -73,18 +94,22 @@ public class EnemyController : MonoBehaviour
     {
         flippedBullet = enemyBullet.gameObject.GetComponent<SpriteRenderer>();
 
-        if (isFacingRight == false)
+        if (hasLOS)
         {
-            flippedBullet.flipX = true;
-            Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
-            FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_BULLET, Channel.ENEMY_BULLET_FX);
-        }
 
-        if (isFacingRight == true)
-        {
-            flippedBullet.flipX = false;
-            Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
-            FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_BULLET, Channel.ENEMY_BULLET_FX);
+            if (isFacingRight == false)
+            {
+                flippedBullet.flipX = true;
+                Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
+                FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_BULLET, Channel.ENEMY_BULLET_FX);
+            }
+
+            if (isFacingRight == true)
+            {
+                flippedBullet.flipX = false;
+                Instantiate(flippedBullet, this.transform.position, Quaternion.identity);
+                FindObjectOfType<SoundManager>().PlaySoundFX(Sounds.ENEMY_BULLET, Channel.ENEMY_BULLET_FX);
+            }
         }
     }
 

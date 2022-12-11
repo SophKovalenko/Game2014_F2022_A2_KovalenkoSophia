@@ -1609,7 +1609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -5.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650043526
@@ -1632,8 +1632,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the joystick or arrow keys to move the player. Fire bullets with the
-    Y button or F key.
+  m_text: "Use the joystick  to move the player. \nFire bullets with the Y button!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5a79e8642c339a4ea9d31edbca26a85, type: 2}
   m_sharedMaterial: {fileID: -3068358619107854148, guid: c5a79e8642c339a4ea9d31edbca26a85, type: 2}
