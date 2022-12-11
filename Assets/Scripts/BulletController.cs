@@ -10,38 +10,20 @@ public class BulletController : MonoBehaviour
     [Range(1.0f, 30.0f)]
     public float force;
     public Vector3 offset;
-    public BulletType bulletType;
-    public BulletManager bulletManager;
+    public PlayerBehaviour playerRef;
+    private ScoreManager scoreManager;
 
     void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        playerRef = FindObjectOfType<PlayerBehaviour>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
-    public void Activate()
+    public void FixedUpdate()
     {
-        bulletManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<BulletManager>();
-        Vector3 playerPosition = FindObjectOfType<PlayerBehaviour>().transform.position + offset;
-
-
-        if (bulletType == BulletType.PLAYER)
-        {
-          //  if (playerPosition.x)
-            direction = Vector2.right;
-           // Rotate();
-            Move();
-          //  Invoke("DestroyYourself", 2.0f);
-        }
-
-        if (bulletType == BulletType.ENEMY)
-        {
-            //direction = (playerPosition - transform.position).normalized;
-            //Rotate();
-            //Move();
-            //Invoke("DestroyYourself", 2.0f);
-        }
-
-
+         Rotate();
+         Move();
     }
 
     private void Rotate()
@@ -51,15 +33,23 @@ public class BulletController : MonoBehaviour
 
     private void Move()
     {
-        rigidbody2D.AddForce(Vector2.up * 1000f, ForceMode2D.Force);
-        Debug.Log("Moving");
+        if (playerRef.isFacingRight)
+        {
+            direction = Vector2.right;
+            rigidbody2D.AddForce(direction * force, ForceMode2D.Impulse);
+        }
+        if (!playerRef.isFacingRight)
+        {
+            direction = Vector2.left;
+            rigidbody2D.AddForce(direction * force, ForceMode2D.Impulse);
+        }
     }
 
     private void DestroyYourself()
     {
         if (gameObject.activeInHierarchy)
         {
-            bulletManager.ReturnBullet(this.gameObject, bulletType);
+            Destroy(this.gameObject);
         }
     }
 
@@ -72,14 +62,18 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")
-            || other.gameObject.CompareTag("Ground")
+        if (other.gameObject.CompareTag("Ground")
             || other.gameObject.CompareTag("Platform"))
         {
+            DestroyYourself();
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            scoreManager.AddPoints(10);
+            Destroy(other.gameObject);
             DestroyYourself();
         }
     }
 
 }
-
-

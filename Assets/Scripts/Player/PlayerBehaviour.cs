@@ -45,7 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float verticalThreshold;
 
     private Rigidbody2D rigidBody;
-    private BulletManager bulletManager;
+    public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
     //private SoundManager soundManager;
 
@@ -58,8 +58,8 @@ public class PlayerBehaviour : MonoBehaviour
         //life = FindObjectOfType<LifeCounter>();
         deathPlane = FindObjectOfType<DeathPlaneController>();
         //soundManager = FindObjectOfType<SoundManager>();
+        bulletPrefab = Resources.Load<GameObject>("Prefabs/playerBullet");
         leftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
-        bulletManager = FindObjectOfType<BulletManager>();
         playerLives = 3;
 
         //dustTrail = GetComponentInChildren<ParticleSystem>();
@@ -250,8 +250,7 @@ public class PlayerBehaviour : MonoBehaviour
     public void OnAButton_Pressed()
     {
         //Fire player bullet
-        Debug.Log("FireBullet");
-        var bullet = bulletManager.GetBullet(bulletSpawnPoint.position, BulletType.PLAYER);
+        Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
     }
 
 }

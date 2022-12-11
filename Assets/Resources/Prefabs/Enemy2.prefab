@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 265229376567999701}
   m_Layer: 0
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ Transform:
   - {fileID: 5455315421058770501}
   - {fileID: 1690380681}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7465449582160502919
 SpriteRenderer:

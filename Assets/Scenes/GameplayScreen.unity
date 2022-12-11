@@ -634,10 +634,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2120197886}
     m_Modifications:
-    - target: {fileID: -8090783230225586441, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
-      propertyPath: enemyBullet
-      value: 
-      objectReference: {fileID: 1936969735230489514, guid: 37b35c9c4ef66df48974d7f198bd6052, type: 3}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15035,8 +15031,6 @@ GameObject:
   - component: {fileID: 1902752614}
   - component: {fileID: 1902752613}
   - component: {fileID: 1902752615}
-  - component: {fileID: 1902752617}
-  - component: {fileID: 1902752616}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -15101,36 +15095,6 @@ MonoBehaviour:
   - {fileID: 1530174607}
   - {fileID: 1658784350}
   - {fileID: 1812410750}
---- !u!114 &1902752616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902752612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c8e53b1dc87a2a41bb64cb9f91e0833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1902752617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902752612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1adc62758bec5bd47a6bc240da24f59f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerBulletNumber: 25
-  playerBulletCount: 0
-  activePlayerBullets: 0
-  enemyBulletNumber: 35
-  enemyBulletCount: 0
-  activeEnemyBullets: 0
 --- !u!4 &1912891798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5434559691141207378, guid: ff6dbef9fc8c325448ea60a110f6d31a, type: 3}
@@ -16007,7 +15971,7 @@ GameObject:
   - component: {fileID: 2094574262}
   m_Layer: 0
   m_Name: '[BULLETS]'
-  m_TagString: Untagged
+  m_TagString: BulletPool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16786,7 +16750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.02
+      value: 12.31
       objectReference: {fileID: 0}
     - target: {fileID: 6100878258246235909, guid: 11f5a464f1a11ee4a9c0f5bf38de0cba, type: 3}
       propertyPath: m_LocalPosition.y
