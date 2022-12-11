@@ -69,5 +69,6 @@ public class SceneNavigator : MonoBehaviour
         Application.Quit();
     }
 
+
 }
 

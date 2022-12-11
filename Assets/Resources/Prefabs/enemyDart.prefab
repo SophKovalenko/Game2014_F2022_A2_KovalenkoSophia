@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 797311006606024156}
   - component: {fileID: 5570694548050402045}
   - component: {fileID: -5382957788475846837}
-  - component: {fileID: 2862636284488490463}
+  - component: {fileID: -139578483401944549}
+  - component: {fileID: 6128841986713046183}
   m_Layer: 0
   m_Name: enemyDart
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5570694548050402045
 SpriteRenderer:
@@ -107,7 +108,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2862636284488490463
+--- !u!114 &-139578483401944549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,8 +117,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1936969735230489514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31e7090a77c8c9a488bda144caa02a9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9703d13d10699d743acfd5b658d5dc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 100
+  bulletSpeed: 10
   bulletDirection: 0
+--- !u!70 &6128841986713046183
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936969735230489514}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000005941958, y: -0.049844764}
+  m_Size: {x: 1.8080007, y: 0.19383842}
+  m_Direction: 1

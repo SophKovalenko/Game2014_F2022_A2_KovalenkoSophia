@@ -16,8 +16,8 @@ TagManager:
   - Ground
   - Enemy
   - Platform
-  - 
-  - 
+  - Buttons
+  - Background
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1038982353
+    locked: 0
+  - name: Buttons
+    uniqueID: 1332960577
     locked: 0

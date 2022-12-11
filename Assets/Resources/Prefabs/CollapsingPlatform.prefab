@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47447a6f3ff573e42ad49eef27c3879f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilCollapse: 4
+  timeUntilCollapse: 3
 --- !u!114 &1408592401
 MonoBehaviour:
   m_ObjectHideFlags: 0
