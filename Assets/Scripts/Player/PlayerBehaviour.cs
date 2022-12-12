@@ -55,6 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
     private SoundManager soundManager;
+    public bool hasKey = false;
 
     void Start()
     {

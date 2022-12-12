@@ -17,7 +17,7 @@ public class PickupObjectController : MonoBehaviour
 {
     private ScoreManager scoreManager;
     private SoundManager soundManager;
-    private bool playerHasKey = false;
+    private PlayerBehaviour playerRef;
     public GameObject NoKeyPopup;
     private float timer;
 
@@ -26,14 +26,18 @@ public class PickupObjectController : MonoBehaviour
     {
         scoreManager = FindObjectOfType<ScoreManager>();
         soundManager = FindObjectOfType<SoundManager>();
+        playerRef = FindObjectOfType<PlayerBehaviour>();
         timer = 0;
     }
 
     public void Update()
     {
-        if (NoKeyPopup.activeInHierarchy == true)
+        if (NoKeyPopup != null)
         {
-            timer+= Time.deltaTime;
+            if (NoKeyPopup.activeInHierarchy == true)
+            {
+                timer += Time.deltaTime;
+            }
         }
     }
 
@@ -66,7 +70,7 @@ public class PickupObjectController : MonoBehaviour
                     Destroy(this.gameObject);
                     break;
                 case "Key": Debug.Log("Player has key!");
-                    playerHasKey = true;
+                    playerRef.hasKey = true;
                     soundManager.PlaySoundFX(Sounds.PICKUP_KEY, Channel.PICKUP_KEY_FX);
                     Destroy(this.gameObject);
                     break;
@@ -85,13 +89,13 @@ public class PickupObjectController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if ((other.gameObject.name == "Player") && (playerHasKey == true))
+        if (playerRef.hasKey == true)
         {
             Debug.Log("Nice! The door is open.");
             soundManager.PlaySoundFX(Sounds.UNLOCK_DOOR, Channel.UNLOCK_DOOR_FX);
             Destroy(this.gameObject);
         }
-        if ((other.gameObject.name == "Player") && (playerHasKey == false))
+        if (playerRef.hasKey == false)
         {
             Debug.Log("You dont have a key!");
             NoKeyPopup.SetActive(true);
